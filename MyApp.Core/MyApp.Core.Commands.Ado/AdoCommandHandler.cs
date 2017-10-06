@@ -9,7 +9,7 @@ namespace MyApp.Core.Commands.Ado
     /// Базовый обработчик команд (ADO.NET)
     /// </summary>
     /// <typeparam name="TCommand">Тип команды</typeparam>
-    public abstract class AdoCommandHandler<TCommand> : ICommandHandler<TCommand> where TCommand: class, ICommand
+    public abstract class AdoCommandHandler<TCommand> : IDisposable, ICommandHandler<TCommand> where TCommand: class, ICommand
     {
         private IDbConnection _connection;
 
