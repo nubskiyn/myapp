@@ -1,0 +1,2 @@
+# myapp
+My CQRS implementation
